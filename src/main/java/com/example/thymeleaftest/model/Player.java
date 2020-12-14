@@ -1,10 +1,8 @@
 package com.example.thymeleaftest.model;
 
-import java.util.UUID;
-
 public class Player {
 
-    private UUID id;
+    private int id;
     private String name;
     private String type;
 
@@ -19,7 +17,7 @@ public class Player {
         this.type = type;
     }
 
-    public Player(UUID id, String name, String type) {
+    public Player(int id, String name, String type) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -28,7 +26,7 @@ public class Player {
     /*
      * GETTERS
      */
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
@@ -43,7 +41,7 @@ public class Player {
     /*
      * SETTERS
      */
-    public void setId(UUID id) {
+    public void setId(int id) {
         this.id = id;
     }
 

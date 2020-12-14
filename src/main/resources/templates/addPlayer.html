@@ -15,6 +15,9 @@
    -->
 <form th:action="@{/addPlayer}"
       th:object="${playerForm}" method="POST">
+    ID:
+    <input type="text" th:field="*{id}" />
+    <br/>
     Name:
     <input type="text" th:field="*{name}" />
     <br/>

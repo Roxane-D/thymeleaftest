@@ -1,17 +1,16 @@
 package com.example.thymeleaftest.form;
 
-import java.util.UUID;
-
 public class PlayerForm {
 
-    private UUID id;
+    private int id;
     private String name;
     private String type;
 
     /*
      * GETTERS
      */
-    public UUID getId() {
+
+    public int getId() {
         return id;
     }
 
@@ -26,7 +25,7 @@ public class PlayerForm {
     /*
      * SETTERS
      */
-    public void setId(UUID id) {
+    public void setId(int id) {
         this.id = id;
     }
 

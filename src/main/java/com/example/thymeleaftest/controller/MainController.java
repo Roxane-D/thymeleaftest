@@ -18,8 +18,8 @@ public class MainController {
     public static List<Player> players = new ArrayList<>();
 
     static {
-        players.add(new Player("Merry", "Hobbit"));
-        players.add(new Player("Pippin", "Hobbit"));
+        players.add(new Player(1, "Merry", "Hobbit"));
+        players.add(new Player(2, "Pippin", "Hobbit"));
     }
 
     @Value("${welcome.message}")
@@ -51,12 +51,13 @@ public class MainController {
     public String savePlayer(Model model, //
                              @ModelAttribute("playerForm") PlayerForm playerForm) {
 
+        int id = playerForm.getId();
         String name = playerForm.getName();
         String type = playerForm.getType();
 
         //
         if (name != null && name.length() > 0) {
-            Player newPlayer = new Player(name, type);
+            Player newPlayer = new Player(id, name, type);
             players.add(newPlayer);
             return "redirect:/playerList";
         }

@@ -12,10 +12,12 @@
 <div>
     <table border="1">
         <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Type</th>
         </tr>
         <tr th:each="player : ${players}">
+            <td th:utext="${player.id}">...</td>
             <td th:utext="${player.name}">...</td>
             <td th:utext="${player.type}">...</td>
         </tr>
