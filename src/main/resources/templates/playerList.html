@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Player List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>Player List</h1>
+<a href="addPlayer">Add Player</a>
+<br/><br/>
+<div>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+        </tr>
+        <tr th:each="player : ${players}">
+            <td th:utext="${player.name}">...</td>
+            <td th:utext="${player.type}">...</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
