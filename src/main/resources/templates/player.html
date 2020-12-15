@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE HTML>
+<html lang="eng" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Player List</title>
+    <meta charset="UTF-8" />
+    <title>Player</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body>
-<h1>Player List</h1>
-<a href="addPlayer">Add Player</a>
+<h1>Player</h1>
+<a href="/playerList">Return to player list</a>
 <br/><br/>
 <div>
     <table border="1">
@@ -15,15 +15,11 @@
             <th>ID</th>
             <th>Name</th>
             <th>Type</th>
-            <th>Edit</th>
-            <th>Delete</th>
         </tr>
-        <tr th:each="player : ${players}">
+        <tr>
             <td th:utext="${player.id}">...</td>
             <td th:utext="${player.name}">...</td>
             <td th:utext="${player.type}">...</td>
-            <td><a th:href="|/updatePlayer/${player.id}|">to update</a></td>
-            <td><a th:href="|/delete/${player.id}|">to delete</a></td>
         </tr>
     </table>
 </div>

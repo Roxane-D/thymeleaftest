@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
 </head>
 <body>
-<h1>Create a Player:</h1>
+<h1>Create a Player :</h1>
 
 <!--
    In Thymeleaf the equivalent of
@@ -15,14 +15,20 @@
    -->
 <form th:action="@{/addPlayer}"
       th:object="${playerForm}" method="POST">
-    ID:
-    <input type="text" th:field="*{id}" />
+
+    <label>ID:
+        <input type="text" th:field="*{id}" />
+    </label>
     <br/>
-    Name:
-    <input type="text" th:field="*{name}" />
+
+    <label>Name:
+        <input type="text" th:field="*{name}" />
+    </label>
     <br/>
-    Type:
-    <input type="text" th:field="*{type}" />
+
+    <label>Type:
+        <input type="text" th:field="*{type}" />
+    </label>
     <br/>
     <input type="submit" value="Create" />
 

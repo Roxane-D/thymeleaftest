@@ -13,9 +13,9 @@ public class ThymeleaftestApplication {
         SpringApplication.run(ThymeleaftestApplication.class, args);
     }
 
-//    @Bean
-//    public RestTemplate restTemplate() {
-//        RestTemplateBuilder builder = new RestTemplateBuilder();
-//        return builder.build();
-//    }
+    @Bean
+    public RestTemplate restTemplate() {
+        RestTemplateBuilder builder = new RestTemplateBuilder();
+        return builder.build();
+    }
 }
