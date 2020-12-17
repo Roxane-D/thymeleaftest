@@ -63,12 +63,11 @@ public class MainController {
     public String create(Model model, //
                              @ModelAttribute("playerForm") PlayerForm playerForm) {
 
-        int id = playerForm.getId();
         String name = playerForm.getName();
         String type = playerForm.getType();
 
         if (name != null && name.length() > 0) {
-            Player newPlayer = new Player(id, name, type);
+            Player newPlayer = new Player(name, type);
             ResponseEntity<Player> response = restTemplate.postForEntity(
                     BASE_URL, newPlayer, Player.class
             );
